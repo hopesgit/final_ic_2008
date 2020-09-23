@@ -23,6 +23,6 @@ class CookBookTest < Minitest::Test
     @cookbook.add_recipe(@recipe1)
     @cookbook.add_recipe(@recipe2)
 
-    assert_eqaul [@recipe1, @recipe2], @cookbook.recipes
+    assert_equal [@recipe1, @recipe2], @cookbook.recipes
   end
 end
