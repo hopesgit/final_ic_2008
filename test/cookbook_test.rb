@@ -16,4 +16,8 @@ class CookBookTest < Minitest::Test
   def test_it_is_cookbook
     assert_instance_of CookBook, @cookbook
   end
+
+  def test_it_holds_recipes
+    assert_instance_of Array, @cookbook.recipes
+  end
 end
