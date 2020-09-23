@@ -13,4 +13,8 @@ class PantryTest < Minitest::Test
   def test_it_is_pantry
     assert_instance_of Pantry, @pantry
   end
+
+  def test_it_has_stock
+    assert_instance_of Hash,  @pantry.stock
+  end
 end
