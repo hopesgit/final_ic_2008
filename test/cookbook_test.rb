@@ -19,5 +19,10 @@ class CookBookTest < Minitest::Test
 
   def test_it_holds_recipes
     assert_instance_of Array, @cookbook.recipes
+
+    @cookbook.add_recipe(@recipe1)
+    @cookbook.add_recipe(@recipe2)
+
+    assert_eqaul [@recipe1, @recipe2], @cookbook.recipes
   end
 end
