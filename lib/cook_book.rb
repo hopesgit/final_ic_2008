@@ -1,3 +1,5 @@
+require "date"
+
 class CookBook
   attr_reader :recipes
 
