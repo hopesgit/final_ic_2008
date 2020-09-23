@@ -5,7 +5,11 @@ class Pantry
     @stock = Hash.new(0)
   end
 
-  def check_stock(ingredient)
+  def stock_check(ingredient)
     @stock[ingredient]
+  end
+
+  def restock(ingredient, qty)
+    @stock[ingredient] += qty
   end
 end
