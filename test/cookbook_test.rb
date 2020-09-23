@@ -1,8 +1,8 @@
 require "./lib/ingredient"
 require "./lib/recipe"
-require "./lib/cookbook"
+require "./lib/cook_book"
 require "minitest/autorun"
-require "minites/pride"
+require "minitest/pride"
 
 class CookBookTest < Minitest::Test
   def setup
