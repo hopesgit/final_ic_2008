@@ -12,4 +12,11 @@ class Pantry
   def restock(ingredient, qty)
     @stock[ingredient] += qty
   end
+
+  def enough_ingredients_for?(recipe)
+    recipe.ingredients_required.all? do |ingredient|
+      # require "pry"; binding.pry
+      ingredient[1] <= stock_check(ingredient[0])
+    end
+  end
 end

@@ -39,11 +39,11 @@ class PantryTest < Minitest::Test
     @pantry.restock(@ingredient1, 5)
     @pantry.restock(@ingredient1, 10)
 
-    refute @pantry.enough_ingredients_for?(@recipe1)
+    assert_equal false, @pantry.enough_ingredients_for?(@recipe1)
 
     @pantry.restock(@ingredient2, 7)
 
-    refute @pantry.enough_ingredients_for?(@recipe1)
+    assert_equal false, @pantry.enough_ingredients_for?(@recipe1)
 
     @pantry.restock(@ingredient2, 1)
 
